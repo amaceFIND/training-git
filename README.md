@@ -1,3 +1,3 @@
 # training-git
 
-dsfdsfsdf
+test notifying collaborators
