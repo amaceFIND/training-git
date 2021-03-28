@@ -1,13 +1,44 @@
 ---
-title: "Untitled"
+title: "Flexdashboard test"
 output: 
   flexdashboard::flex_dashboard:
-    orientation: columns
+    orientation: rows
     vertical_layout: fill
 ---
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
+```
+```{r}
+computeArticles = function(...) return(45)
+computeComments = function(...) return(126)
+computeSpam = function(...) return(15)
+```
+
+Row
+-----------------------------------------------------------------------
+
+### Articles per Day
+
+```{r}
+articles <- computeArticles()
+valueBox(articles, icon = "fa-pencil")
+```
+
+### Comments per Day
+
+```{r}
+comments <- computeComments()
+valueBox(comments, icon = "fa-comments")
+```
+
+### Spam per Day
+
+```{r}
+spam <- computeSpam()
+valueBox(spam, 
+         icon = "fa-trash",
+         color = ifelse(spam > 10, "warning", "primary"))
 ```
 
 Column {data-width=650}
@@ -15,8 +46,10 @@ Column {data-width=650}
 
 ### Chart A
 
-```{r, fig.width=10, fig.height=7}
-plot(cars)
+```{r}
+DT::datatable(mtcars, options = list(
+  bPaginate = FALSE
+))
 ```
 
 Column {data-width=350}
