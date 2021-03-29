@@ -39,7 +39,7 @@ jobs:
        # Run the script
       - name: Run R Script
         run: |
-          Rscript -e download.R
+          Rscript download.R
 
       # Commit files
       - name: Commit files
