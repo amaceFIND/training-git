@@ -47,7 +47,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git pull origin main
-          git add tests_today.csv
+          git add data/tests_today.csv
           git commit -m "update tests_today.csv" || echo "Nothing to update"
 
 
