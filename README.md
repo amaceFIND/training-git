@@ -1,3 +1,3 @@
 # training-git
 
-test notifying collaborators
+Branch with changes in R script, and updated README.
