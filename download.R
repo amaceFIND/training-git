@@ -11,3 +11,10 @@ tests_data_today <- tests_data %>%
 
 readr::write_csv(tests_data_today, "data/tests_today.csv")
 
+
+
+
+
+
+
+
